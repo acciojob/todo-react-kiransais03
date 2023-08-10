@@ -9,9 +9,11 @@ const Displaycomp=({listdata,setListdata})=>{
     }
 
     return(<>
-        {listdata.map((elem,index)=>{ return (<div key={index}>
+    <ul>
+        {listdata.map((elem,index)=>{ return (<li key={index}>
             <span>{elem}</span> <span><button onClick={(e)=>{removefunc(e,index)}}>Delete</button></span>
-            </div>)})}
+            </li>)})}
+            </ul>
         </>)
 }
 
